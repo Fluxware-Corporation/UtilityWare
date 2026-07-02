@@ -1,0 +1,18 @@
+# UtilityWare .gitignore
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor noise
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Tool output that might end up alongside scripts
+*.bak.*
+*.tmp
+*.log
+__pycache__/
+*.pyc
