@@ -1,14 +1,12 @@
 # Contributing to UtilityWare
 
-Thanks for considering a contribution! UtilityWare is maintained by **Fluxware Corporation** and we welcome community contributions through a fork-first workflow.
+Thanks for considering a contribution! UtilityWare is maintained by **Fluxware Corporation**, and we welcome community contributions through the standard GitHub fork-and-pull-request workflow.
 
-## How to contribute (fork-first workflow)
-
-We use a **fork-and-issue** model instead of direct pull requests. Here's how it works:
+## How to contribute
 
 ### 1. Fork the repository
 
-Click the **Fork** button at the top right of the [main UtilityWare repository](https://github.com/PLACEHOLDER/UtilityWare) page on GitHub. This creates your own copy of the repo under your account.
+Click the **Fork** button at the top right of the [main UtilityWare repository](https://github.com/PLACEHOLDER/UtilityWare) page on GitHub. This creates your own copy of the repository under your account.
 
 ### 2. Clone your fork locally
 
@@ -20,13 +18,15 @@ git remote add upstream https://github.com/PLACEHOLDER/UtilityWare.git
 
 ### 3. Create a branch for your changes
 
+Create a descriptive branch name based on the work you're doing.
+
 ```bash
 git checkout -b add-my-new-tool
 ```
 
 ### 4. Make your changes
 
-Follow the guidelines below (adding a tool, style rules, etc.). Commit your work:
+Follow the guidelines below (adding a tool, style rules, etc.), then commit your work.
 
 ```bash
 git add -A
@@ -34,44 +34,38 @@ git commit -m "add: <tool-name> — <one-line description>"
 git push origin add-my-new-tool
 ```
 
-### 5. Open an issue in the main repository
+### 5. Open a Pull Request
 
-**Do not open a pull request.** Instead, go to the [issues page](https://github.com/PLACEHOLDER/UtilityWare/issues) of the **main** repository (not your fork) and open a new issue with the following template:
+Once your branch has been pushed, open a **Pull Request** from your fork to the **main UtilityWare repository**.
 
-```
-**Title:** Merge request: <brief description>
+Please include:
 
-**Type:** new tool / bug fix / improvement / documentation
+- A clear title describing the change.
+- A summary of what the change does.
+- Why the change should be merged.
+- Any relevant screenshots or examples (if applicable).
 
-**Fork:** YOUR_USERNAME/UtilityWare
-**Branch:** add-my-new-tool
-**Link:** https://github.com/YOUR_USERNAME/UtilityWare/tree/add-my-new-tool
+Before submitting your Pull Request, ensure:
 
-**Description:**
-<What does this change do? Why should it be merged?>
-
-**Tool(s) added/changed:**
-- <tool-name> — <one-line description>
-
-**Checklist:**
-- [ ] Each new tool has its own folder with a README.md
-- [ ] The tool is executable (chmod +x)
-- [ ] The category README has been updated
+- [ ] Each new tool has its own folder with a `README.md`
+- [ ] The tool is executable (`chmod +x`)
+- [ ] The category `README.md` has been updated
 - [ ] No third-party dependencies unless genuinely needed
-- [ ] No telemetry or unwanted network calls
-```
+- [ ] No telemetry or unnecessary network calls
 
 ### 6. Maintainers review
 
-The Fluxware Corporation maintainers will review your issue and the changes in your fork. They may:
+The Fluxware Corporation maintainers will review your Pull Request. During review, we may:
 
-- **Merge** the changes into the main repository (we'll handle the actual merge from your fork).
-- **Request changes** — we'll comment on the issue with feedback. Make the requested changes in your fork, push to the same branch, and add a comment to the issue.
-- **Decline** — if the change doesn't fit the project's scope or philosophy, we'll explain why.
+- **Merge** the Pull Request if everything looks good.
+- **Request changes** if improvements are needed. Simply push additional commits to the same branch and the Pull Request will update automatically.
+- **Close** the Pull Request if it doesn't fit the project's scope or philosophy, with an explanation whenever possible.
+
+Please be patient during review. We appreciate every contribution.
 
 ### 7. After merge
 
-Once merged, you can sync your fork with the main repository:
+Once your Pull Request has been merged, you can sync your fork:
 
 ```bash
 git checkout main
@@ -81,37 +75,42 @@ git push origin main
 
 ## Adding a new tool
 
-1. **Pick the right category.** Browse [`CATEGORIES.md`](./CATEGORIES.md). If your tool genuinely doesn't fit any, mention it in your issue and we'll discuss a new category.
+1. **Pick the right category.** Browse [`CATEGORIES.md`](./CATEGORIES.md). If your tool genuinely doesn't fit any existing category, open an issue to discuss adding a new one.
 2. **Create the folder.** Each tool lives at `<category>/<tool-name>/`.
 3. **Add the tool itself.** Use the matching extension:
-   - `.sh` for shell scripts (POSIX/bash)
+   - `.sh` for POSIX/Bash shell scripts
    - `.py` for Python 3.6+ tools
-4. **Add a README.md** in the same folder. Use the existing tools' READMEs as a template.
+4. **Add a `README.md`** in the same folder. Use existing tool READMEs as a reference.
 5. **Make the tool executable** (`chmod +x`).
-6. **Update the category README.** Add a one-line entry linking to your tool.
+6. **Update the category `README.md`.** Add a one-line entry linking to your tool.
 
 ## Style guidelines
 
-- **Small is beautiful.** If a tool grows past ~150 lines, consider splitting it.
-- **No telemetry, no network calls** unless the tool's whole point is network (e.g. `weather`, `speedtest`).
-- **Document dependencies** in the README under `Requirements`.
-- **Use clear exit codes**: `0` success, `1` usage error, `2` runtime error.
-- **Be polite on stderr** — error messages should start with the tool name.
-- **Match the existing README format** so the repo stays scannable.
-- **Author field** in tool READMEs should remain `Fluxware Corporation` (it's set by default in the generator).
+- **Small is beautiful.** If a tool grows beyond roughly 150 lines, consider splitting it. (optional)
+- **No telemetry or unnecessary network calls** unless networking is the tool's primary purpose (for example, `weather` or `speedtest`).
+- **Document dependencies** under a `Requirements` section in the tool's README.
+- **Use clear exit codes:**
+  - `0` Success
+  - `1` Usage error
+  - `2` Runtime error
+- **Be polite on stderr.** Error messages should begin with the tool name.
+- **Match the existing README format** so the repository remains consistent.
+- **Author field** in generated tool READMEs should remain `Fluxware Corporation` (this is handled automatically by the generator).
 
 ## Reporting bugs
 
-Open an issue in the main repository with:
+If you find a bug, please open an issue and include:
+
 - The tool name and category
-- Your OS and shell
+- Your operating system and shell
 - The exact command you ran
-- The expected vs. actual output
+- The expected output
+- The actual output
 
 ## Licensing
 
-By contributing, you agree your contributions will be licensed under the MIT license (see [`LICENSE`](./LICENSE)), with copyright assigned to Fluxware Corporation.
+By contributing, you agree that your contributions will be licensed under the MIT License (see [`LICENSE`](./LICENSE)).
 
 ## Code of Conduct
 
-Participation in this project is governed by [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md). Be excellent to each other.
+Participation in this project is governed by [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md). Please be respectful and help foster a welcoming community.
