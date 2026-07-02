@@ -6,14 +6,14 @@ Thanks for considering a contribution! UtilityWare is maintained by **Fluxware C
 
 ### 1. Fork the repository
 
-Click the **Fork** button at the top right of the [main UtilityWare repository](https://github.com/PLACEHOLDER/UtilityWare) page on GitHub. This creates your own copy of the repository under your account.
+Click the **Fork** button at the top right of the [main UtilityWare repository](https://github.com/Fluxware-Corporation/UtilityWare) page on GitHub. This creates your own copy of the repository under your account.
 
 ### 2. Clone your fork locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/UtilityWare.git
+git clone https://github.com/Fluxware-Corporation/UtilityWare.git
 cd UtilityWare
-git remote add upstream https://github.com/PLACEHOLDER/UtilityWare.git
+git remote add upstream https://github.com/Fluxware-Corporation/UtilityWare.git
 ```
 
 ### 3. Create a branch for your changes
@@ -47,11 +47,11 @@ Please include:
 
 Before submitting your Pull Request, ensure:
 
-- [ ] Each new tool has its own folder with a `README.md`
-- [ ] The tool is executable (`chmod +x`)
-- [ ] The category `README.md` has been updated
-- [ ] No third-party dependencies unless genuinely needed
-- [ ] No telemetry or unnecessary network calls
+- [x] Each new tool has its own folder with a `README.md`
+- [x] The tool is executable (`chmod +x`)
+- [x] The category `README.md` has been updated
+- [x] No third-party dependencies unless genuinely needed
+- [x] No telemetry or unnecessary network calls
 
 ### 6. Maintainers review
 
