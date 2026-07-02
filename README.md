@@ -1,5 +1,5 @@
 # 🧰 UtilityWare
-
+![Static Badge](https://img.shields.io/badge/Open-Source-LimeGreen?logo=GitHub&logoColor=%232EA043&labelColor=%23000000)
 > A **genuinely-too-big** collection of terminal utilities — shell scripts, CLI tools, Git helpers, system utilities, network tools, dev accelerators, text processors, productivity boosters, fun toys, media helpers, and security utilities.
 
 **178 tools** across **17 categories**. Each tool lives in its own folder with a dedicated `README.md` explaining what it does, how to use it, and what it depends on.
