@@ -2,7 +2,7 @@
 # install-termux.sh - UtilityWare installer with sleek adaptive menu (Termux)
 #
 # >>> REPLACE THE NEXT LINE WITH YOUR REPO URL <<<
-REPO_URL="https://github.com/PLACEHOLDER/UtilityWare.git"
+REPO_URL="https://github.com/Fluxware-Corporation/UtilityWare.git"
 # =========================================================================
 
 set -euo pipefail
